@@ -16,11 +16,11 @@ class XttpRequest
 	* 
 	* @param  string $url
 	* @param  array $data
-	* @return \DanielGriffiths\Xttp\XttpRequest
+	* @return self
 	*/
 	public function get($url, $data = [])
 	{
-		return (new XttpRequest)->request('get', $url, $data);
+		return $this->request('get', $url, $data);
 	}
 
 	/**
@@ -28,11 +28,11 @@ class XttpRequest
 	* 
 	* @param  string $url
 	* @param  array $data
-	* @return \DanielGriffiths\Xttp\XttpRequest
+	* @return self
 	*/
 	public function post($url, $data = [])
 	{
-		return (new XttpRequest)->request('post', $url, $data);
+		return $this->request('post', $url, $data);
 	}
 
 	/**
