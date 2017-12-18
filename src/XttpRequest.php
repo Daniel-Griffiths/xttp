@@ -47,13 +47,14 @@ class XttpRequest
 		$this->ch = curl_init();
 		curl_setopt_array($this->ch, [
 			CURLOPT_URL => $url,
-			CURLOPT_POSTFIELDS => json_encode($data),
-			CURLOPT_POST => ($type == 'post') ? 1 : 0,
+			CURLOPT_VERBOSE => 0,
+			CURLOPT_FAILONERROR => 1,
+			CURLOPT_FOLLOWLOCATION => true,
 			CURLOPT_RETURNTRANSFER => true,
 			CURLOPT_SSL_VERIFYPEER => false,
-			CURLOPT_FAILONERROR => 0,
-			CURLOPT_VERBOSE => 1,
-			CURLOPT_TIMEOUT => 0, 
+			CURLOPT_HTTPAUTH => CURLAUTH_BASIC,
+			CURLOPT_POST => ($type == 'post') ? 1 : 0,
+			CURLOPT_HTTPHEADER => ['Content-Type:application/json']
 		]);
 		return $this;
 	}
@@ -64,7 +65,7 @@ class XttpRequest
 	* @return mixed
 	*/
 	public function send()
-	{   
+	{   		
 		return json_decode(
 			curl_exec($this->ch)
 		); 
