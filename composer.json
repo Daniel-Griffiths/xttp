@@ -1,7 +1,7 @@
 {
     "name": "daniel-griffiths/xttp",
     "type": "library",
-    "description": "A PHP Http client",
+    "description": "A minimalist PHP Http client",
     "keywords": [
         "http",
         "php"
