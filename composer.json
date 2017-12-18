@@ -1,0 +1,27 @@
+{
+    "name": "daniel-griffiths/xttp",
+    "type": "library",
+    "description": "A PHP Http client",
+    "keywords": [
+        "http",
+        "php"
+    ],
+    "homepage": "https://github.com/daniel-griffiths/xttp",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Daniel Griffiths",
+            "email": "contact@danielgriffiths.me",
+            "homepage": "http://danielgriffiths.me",
+            "role": "Owner"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "DanielGriffiths\\Xttp\\": "src"
+        }
+    },
+    "require": {
+        "php": "~5.6|~7.0"
+    }
+}
