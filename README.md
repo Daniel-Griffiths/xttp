@@ -10,6 +10,9 @@ composer require daniel-griffiths/xttp dev-master
 
 ## Usage
 
+By default Xttp assumes that any data sent/receieve is encoded in json. For an example of how to use this library please see the code below.
+
+
 ```PHP
 <?php
 
